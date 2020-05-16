@@ -1,0 +1,17 @@
+{
+  "name": "alev",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A twitch bot for the Twitch channel EmreCA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "tmi.js": "^1.5.0",
+    "twitch": "^4.0.9"
+  }
+}
