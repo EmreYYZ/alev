@@ -5,13 +5,22 @@
   "description": "A twitch bot for the Twitch channel EmreCA",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.8.7",
     "axios": "^0.19.2",
+    "friendly-errors-webpack-plugin": "npm:@soda/friendly-errors-webpack-plugin@^1.7.1",
     "tmi.js": "^1.5.0",
     "twitch": "^4.0.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-preset-env": "^1.7.0"
   }
 }
