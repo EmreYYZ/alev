@@ -25,7 +25,3 @@ client.on('message', (channel, tags, message, self) => {
             console.log(error);
         });
 };
-
-    // let movieResult = `Emre Bey'in son izledigi film ${year} yapimi, ${director} tarafindan yonetilen, ${actor1}, ${actor2} gibi oyuncularin basrol oynadigi ${title}.`;
-
-    // client.say(channel, movieResult);
