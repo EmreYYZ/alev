@@ -7,5 +7,8 @@ The bot currently uses TMI.js so you may need to look at its docs on how to gene
 It pulls the tv show and movie data from Trakt.TV API. 
 
 to do:
+
 -!title and !game commands.
+
+
 -viewers can change the color of philips hue lightbulbs by claiming a channel reward with their reward points.
