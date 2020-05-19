@@ -1,27 +1,24 @@
 import { clientID, accesstoken, tAuth, alevPass, traktClientID, traktID, oneriList } from './secrets.js';
-import commands from './db.js';
 import tmi from 'tmi.js';
 import axios from 'axios';
 
 
-client.on('message', (channel, tags, message, self) => {
-    axios.get(`https://api.trakt.tv/users/${traktID}/lists/${oneriList}/items/movies`, {
-        headers: {
-            "Content-type": "application/json",
-            "trakt-api-key": traktClientID,
-            "trakt-api-version": 2,
-        }
+axios.get(`https://api.trakt.tv/users/${traktID}/history/episodes`, {
+    headers: {
+        "Content-type": "application/json",
+        "trakt-api-key": traktClientID,
+        "trakt-api-version": 2,
+    }
+})
+    .then(function (response) {
+        let list = response.data;
+        let episode = list[0].episode;
+        let tvShow = list[0].show;
+
+        client.say(channel, `Emre Bey en son ${tvShow.title} dizisinin ${episode.season}. sezon ${episode.number}. bolumu olan "${episode.title}" bolumunu izledi.`);
+
+        console.log(`Emre Bey en son ${tvShow.title} dizisinin ${episode.season}. sezon ${episode.number}. bolumu olan "${episode.title}" bolumunu izledi.`);
     })
-        .then(function (response) {
-            let list = response.data;
-            let movieNo = Math.floor(Math.random() * list.length);
-            let movie = list[movieNo].movie;
-
-            client.say(channel, `Emre Bey ${movie.year} tarihli ${movie.title} adli yapimi oneriyor.`);
-
-            console.log(`Emre Bey ${movie.year} tarihli ${movie.title} adli yapimi oneriyor.`);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-};
+    .catch(function (error) {
+        console.log(error);
+    });

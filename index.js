@@ -67,9 +67,48 @@ client.on('message', (channel, tags, message, self) => {
                 let movieNo = Math.floor(Math.random() * list.length);
                 let movie = list[movieNo].movie;
 
-                client.say(channel, `Emre Bey ${movie.year} tarihli ${movie.title} adli yapimi oneriyor.`);
+                client.say(channel, `Emre Bey ${movie.year} yilinda gosterime giren ${movie.title} adli yapimi izlemenizi oneriyor.`);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 
-                console.log(`Emre Bey ${movie.year} tarihli ${movie.title} adli yapimi oneriyor.`);
+    if (nakedCmd === "film") {
+
+        axios.get(`https://api.trakt.tv/users/${traktID}/history/movies`, {
+            headers: {
+                "Content-type": "application/json",
+                "trakt-api-key": traktClientID,
+                "trakt-api-version": 2,
+            }
+        })
+            .then(function (response) {
+                let list = response.data;
+                let movie = list[0].movie;
+
+                client.say(channel, `Emre Bey en son ${movie.title} (${movie.year}) adli yapimi izledi.`);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    if (nakedCmd === "dizi") {
+
+        axios.get(`https://api.trakt.tv/users/${traktID}/history/episodes`, {
+            headers: {
+                "Content-type": "application/json",
+                "trakt-api-key": traktClientID,
+                "trakt-api-version": 2,
+            }
+        })
+            .then(function (response) {
+                let list = response.data;
+                let episode = list[0].episode;
+                let tvShow = list[0].show;
+
+                client.say(channel, `Emre Bey en son ${tvShow.title} dizisinin ${episode.season}. sezon ${episode.number}. bolumu olan "${episode.title}" bolumunu izledi.`);
             })
             .catch(function (error) {
                 console.log(error);
