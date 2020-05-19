@@ -1,7 +1,7 @@
 # Custom added by Emre
 secrets.js
 .secrets.js
-
+secret/
 # Logs
 logs
 *.log
