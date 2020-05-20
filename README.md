@@ -8,7 +8,7 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 
 **to do:**
 
-~~-!title and !game commands.~~
+- ~~!title and !game commands.~~
 - add command timer
 - viewers can change the color of philips hue lightbulbs by claiming a channel reward with their reward points.
 - add an interface maybe?
