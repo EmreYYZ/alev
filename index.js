@@ -1,4 +1,4 @@
-import { clientID, accesstoken, tAuth, alevPass, traktClientID, traktID, oneriList } from './secrets.js';
+import { clientID, accesstoken, tAuth, alevPass, traktClientID, traktID, oneriList, channelID } from './secret/secrets.js';
 import { commands, komutList } from './db.js';
 import tmi from 'tmi.js';
 import axios from 'axios';
@@ -26,12 +26,12 @@ client.on('connected', (address, port) => {
     client.action('emreca', 'Baglanti kuruldu... 🔥... Alevleniyor... 🚬... Merhaba chat!');
 });
 
-client.on('message', (channel, tags, message, self) => {
+client.on('message', (channel, user, message, self) => {
     // Ignore echoed messages.
     if (self) return;
     let allCommands = '';
     let newCmd = message.toLowerCase();
-    let newCmdTR = message.toLocaleLowerCase('tr')
+    let newCmdTR = message.toLocaleLowerCase('tr');
     let nakedCmd = newCmd.substring(1);
 
     for (let i = 0; i < commands.length; i++) {
@@ -115,4 +115,70 @@ client.on('message', (channel, tags, message, self) => {
             });
     }
 
+    // if (user.mod === true && nakedCmd === 'baslik') {
+    //     // User is a mod.
+    //     console.log(message);
+    //     let newTitle = message.substring(7);
+    //     console.log(newTitle);
+    //     client.say(channel, `Istenen title: ${message} veya ${newTitle}`);
+    // }
+
+});
+
+client.on('chat', (channel, user, message, self) => {
+    // Ignore echoed messages.
+    if (self) return;
+
+
+    let cmdCmd = message.substring(0, 7);
+
+    if ((user.mod || user['user-type'] === 'mod') && cmdCmd === '!baslik') {
+        // User is a mod.
+        let newTitle = message.substring(8);
+
+        client.say(channel, `Moderator bey, emriniz gerceklestiriliyor. Yayin basligini "${newTitle}" olarak degistiriyorum.`);
+
+        axios.put(`https://api.twitch.tv/kraken/channels/${channelID}`, { "channel": { "status": newTitle } }, {
+            headers: {
+                "Accept": "application/vnd.twitchtv.v5+json",
+                "Client-ID": clientID,
+                "Authorization": krakenAuth,
+            }
+        })
+            .then(response => {
+                console.log(response);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    }
+});
+
+client.on('chat', (channel, user, message, self) => {
+    // Ignore echoed messages.
+    if (self) return;
+
+
+    let cmdCmd = message.substring(0, 5);
+
+    if ((user.mod || user['user-type'] === 'mod') && cmdCmd === '!oyun') {
+        // User is a mod.
+        let newGame = message.substring(6);
+
+        client.say(channel, `Moderator bey, emriniz gerceklestiriliyor. Yayin turunu "${newGame}" olarak degistiriyorum.`);
+
+        axios.put(`https://api.twitch.tv/kraken/channels/${channelID}`, { "channel": { "game": newGame } }, {
+            headers: {
+                "Accept": "application/vnd.twitchtv.v5+json",
+                "Client-ID": clientID,
+                "Authorization": krakenAuth,
+            }
+        })
+            .then(response => {
+                console.log(response);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    }
 });
