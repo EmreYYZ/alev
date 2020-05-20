@@ -14,9 +14,12 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 `!discord`, `!instagram`, `!twitter`, `!trakt`, `!portfolio`  
 #### Channel  
 `!komutlar` to show all commands available for regular users.  
+#### Fun
+`!jahrein`
 
 ### 🚀 Dynamic
 - - -
+#### Entertainment
 `!oneri` pulls a random movie from EmreCA's recommendation list on Trakt.TV.  
 `!film` tells the last movie EmreCA has watched.  
 `!dizi` tells the last tv episode EmreCA has watched.  
@@ -31,7 +34,9 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 - [x] add a dynamic generic-command-system for static commands.
 - [x] add a movie history, tv show history, and movie recommendations commands.
 - [x] !title and !game commands.
-- [ ] !uptime
-- [ ] add command timer
+- [ ] add a working `!uptime` command
+- [ ] add and randomize strings for `!jahrein`
+- [ ] add command cooldown for some commands
 - [ ] viewers can change the color of philips hue lightbulbs by claiming a channel reward with their reward points.
+- [ ] add 🔥 Alev to other channels (i.e. `Slothworks`) to reply to strings including `Casthane`, `f5uck`, and so on. 
 - [ ] add an interface maybe?
