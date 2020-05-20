@@ -6,8 +6,13 @@ The bot currently uses TMI.js so you may need to look at its docs on how to gene
  
 The bot pulls the tv show, movie and suggestion data from the Trakt.TV API. 
 
+## Commands
+
+
 ## To-do List
 
+- [x] add a dynamic generic-command-system for static commands.
+- [x] add a movie history, tv show history, and movie recommendations commands.
 - [x] !title and !game commands.
 - [ ] add command timer
 - [ ] viewers can change the color of philips hue lightbulbs by claiming a channel reward with their reward points.
