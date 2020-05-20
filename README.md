@@ -1,4 +1,4 @@
-# 🔥 Alev 
+## 🔥 Alev 
 
 A highly customized Twitch chat bot being used by my Twitch channel EmreCA. Made the repo public after many requests from my viewers.
 
