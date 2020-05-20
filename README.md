@@ -12,9 +12,15 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 
 ### Dynamic
 
-`!oneri` pulls a random movie from EmreCA's recommendation list on Trakt.TV.
-`!film` tells the last movie EmreCA has watched.
-`!dizi` tells the last tv episode EmreCA has watched.
+`!oneri` pulls a random movie from EmreCA's recommendation list on Trakt.TV.  
+`!film` tells the last movie EmreCA has watched.  
+`!dizi` tells the last tv episode EmreCA has watched.  
+
+#### Mod-only
+
+`!baslik {title}` changes the stream title.  
+`!oyun {game}` changes the stream game.
+
 ## To-do List
 
 - [x] add a dynamic generic-command-system for static commands.
