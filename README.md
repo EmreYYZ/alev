@@ -38,7 +38,7 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 - [ ] add and randomize strings for `!jahrein`
 - [ ] add command cooldown for some commands
 - [ ] connect 🔥 Alev to Twitch's `Channel Reward` system somehow. So that the rewards can trigger commands.
-- [ ] viewers can change the color of 💡 Philips Hue lightbulbs by claiming a channel reward with their reward points.
+- [ ] viewers can change the color of 💡 `Philips Hue` lightbulbs by claiming a channel reward with their reward points.
 - [ ] make Discord great again!
 - [ ] add 🔥 Alev to other channels (i.e. `Slothworks`) to reply to strings including `Casthane`, `f5uck`, and so on. 
 - [ ] add an interface maybe?
