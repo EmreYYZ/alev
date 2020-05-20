@@ -9,13 +9,14 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 ## Commands
 
 ### 💤 Static
+- - -
 #### Social  
 `!discord`, `!instagram`, `!twitter`, `!trakt`, `!portfolio`  
 #### Channel  
 `!komutlar` to show all commands available for regular users.  
 
 ### 🚀 Dynamic
-
+- - -
 `!oneri` pulls a random movie from EmreCA's recommendation list on Trakt.TV.  
 `!film` tells the last movie EmreCA has watched.  
 `!dizi` tells the last tv episode EmreCA has watched.  
