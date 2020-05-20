@@ -9,6 +9,10 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 ## Commands
 
 ### Static
+#### Social  
+`!discord`, `!instagram`, `!twitter`, `!trakt`, `!portfolio`  
+#### Channel  
+`!komutlar` to show all commands available for regular users.  
 
 ### Dynamic
 
@@ -26,6 +30,7 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 - [x] add a dynamic generic-command-system for static commands.
 - [x] add a movie history, tv show history, and movie recommendations commands.
 - [x] !title and !game commands.
+- [ ] !uptime
 - [ ] add command timer
 - [ ] viewers can change the color of philips hue lightbulbs by claiming a channel reward with their reward points.
 - [ ] add an interface maybe?
