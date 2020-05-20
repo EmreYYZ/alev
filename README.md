@@ -8,13 +8,13 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 
 ## Commands
 
-### Static
+### 💤 Static
 #### Social  
 `!discord`, `!instagram`, `!twitter`, `!trakt`, `!portfolio`  
 #### Channel  
 `!komutlar` to show all commands available for regular users.  
 
-### Dynamic
+### 🚀 Dynamic
 
 `!oneri` pulls a random movie from EmreCA's recommendation list on Trakt.TV.  
 `!film` tells the last movie EmreCA has watched.  
@@ -25,7 +25,7 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 `!baslik {title}` changes the stream title.  
 `!oyun {game}` changes the stream game.
 
-## To-do List
+## 📃 To-do List
 
 - [x] add a dynamic generic-command-system for static commands.
 - [x] add a movie history, tv show history, and movie recommendations commands.
