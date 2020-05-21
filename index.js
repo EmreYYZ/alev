@@ -1,4 +1,4 @@
-import { clientID, accesstoken, tAuth, alevPass, traktClientID, traktID, oneriList, channelID } from './secret/secrets.js';
+import { clientID, accesstoken, tAuth, alevPass, traktClientID, traktID, oneriList, channelID, krakenAuth } from './secret/secrets.js';
 import { commands, komutList } from './db.js';
 import tmi from 'tmi.js';
 import axios from 'axios';
