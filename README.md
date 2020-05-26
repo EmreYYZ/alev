@@ -16,10 +16,12 @@ NodeJS & TMI.js & Trakt API
 - - -
 #### Social  
 `!discord`, `!instagram`, `!twitter`, `!trakt`, `!portfolio`  
+#### Info  
+`!korsan`  
 #### Channel  
 `!komutlar` to show all commands available for regular users.  
 #### Fun
-`!jahrein`
+`!jahrein`, `!cansungur`
 
 ### 🚀 Dynamic
 - - -
