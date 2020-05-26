@@ -43,6 +43,7 @@ NodeJS & TMI.js & Trakt API
 - [ ] add a working `!uptime` command
 - [ ] add and randomize strings for `!jahrein`
 - [ ] add command cooldown for some commands
+- [ ] add `!rulet` which is basically russian roulette. if you lose, you get banned.
 - [ ] connect 🔥 Alev to Twitch's `Channel Reward` system somehow. So that the rewards can trigger commands.
 - [ ] viewers can change the color of 💡 `Philips Hue` lightbulbs by claiming a channel reward with their reward points.
 - [ ] make Discord great again!
