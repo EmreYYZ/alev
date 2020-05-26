@@ -7,7 +7,7 @@ The bot currently uses TMI.js so you may need to look at its docs on how to gene
 The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 
 ## Requirements
-
+- - -
 NodeJS & TMI.js & Trakt API
 
 ## Commands
