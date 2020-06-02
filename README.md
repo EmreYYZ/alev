@@ -4,7 +4,11 @@ A highly customized Twitch chat bot being used by my Twitch channel EmreCA. Made
 
 The bot currently uses TMI.js so you may need to look at its docs on how to generate a oAuth token and so on. Without one, the code won't work. Reading Twitch API docs would also help because the bot directly uses twitch api for some commands.
  
-The bot pulls the tv show, movie and suggestion data from the Trakt.TV API. 
+The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
+
+## Requirements
+- - -
+NodeJS & TMI.js & Trakt API
 
 ## Commands
 - - -
@@ -12,10 +16,12 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 - - -
 #### Social  
 `!discord`, `!instagram`, `!twitter`, `!trakt`, `!portfolio`  
+#### Info  
+`!korsan`  
 #### Channel  
 `!komutlar` to show all commands available for regular users.  
 #### Fun
-`!jahrein`
+`!jahrein`, `!cansungur`
 
 ### 🚀 Dynamic
 - - -
@@ -37,6 +43,7 @@ The bot pulls the tv show, movie and suggestion data from the Trakt.TV API.
 - [ ] add a working `!uptime` command
 - [ ] add and randomize strings for `!jahrein`
 - [ ] add command cooldown for some commands
+- [ ] add `!rulet` which is basically russian roulette. if you lose, you get banned.
 - [ ] connect 🔥 Alev to Twitch's `Channel Reward` system somehow. So that the rewards can trigger commands.
 - [ ] viewers can change the color of 💡 `Philips Hue` lightbulbs by claiming a channel reward with their reward points.
 - [ ] make Discord great again!
