@@ -53,6 +53,10 @@ client.on('message', (channel, user, message, self) => {
         client.say(channel, 'Hayir savunmadim efendim.')
     }
 
+    if (message.includes(':)' || 'B)' || ';)' || 'R)') === true) {
+        client.timeout(channel, user, 300, "Emre Bey'in sinirini bozan smiley kullanimi.");
+    }
+
     if (nakedCmd === "oneri") {
 
         axios.get(`https://api.trakt.tv/users/${traktID}/lists/${oneriList}/items/movies`, {
