@@ -49,12 +49,26 @@ client.on('message', (channel, user, message, self) => {
     }
     client.say(channel, allCommands)
 
-    if (newCmdTR.includes('sen abdülhamid' || 'sen abdülhamit' || 'sen abdulhamıd' || 'sen abdulhamıt' || 'sen abdulhamid' || 'sen abdulhamit') === true) {
+    if (newCmdTR.includes('sen abdülhamid') || newCmdTR.includes('sen abdülhamit') || newCmdTR.includes('sen abdulhamıd') || newCmdTR.includes('sen abdulhamıt') || newCmdTR.includes('sen abdulhamid') || newCmdTR.includes('sen abdulhamit')) {
         client.say(channel, 'Hayir savunmadim efendim.')
     }
 
-    if (message.includes(':)' || 'B)' || ';)' || 'R)') === true) {
-        client.timeout(channel, user, 300, "Emre Bey'in sinirini bozan smiley kullanimi.");
+    if (message.includes(':)') ||
+        message.includes('B)') ||
+        message.includes(';)') ||
+        message.includes('R)') ||
+        message.includes(": )") ||
+        message.includes('(:') ||
+        message.includes('( :') ||
+        message.includes('ツ') ||
+        message.includes(':}') ||
+        message.includes(':]') ||
+        message.includes('=)') ||
+        message == ")" ||
+        message == " )"
+    ) {
+        client.timeout(channel, user.username, 120, "Emre Bey'in sinirini bozan smiley kullanimi. Size 2 dakika timeout veriyorum");
+        client.say(channel, "Emre Bey'in sinirini bozan smiley kullanimi. Size 2 dakika timeout veriyorum.");
     }
 
     if (nakedCmd === "oneri") {
@@ -128,6 +142,7 @@ client.on('message', (channel, user, message, self) => {
     // }
 
 });
+
 
 client.on('chat', (channel, user, message, self) => {
     // Ignore echoed messages.
