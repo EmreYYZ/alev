@@ -67,8 +67,8 @@ client.on('message', (channel, user, message, self) => {
         message == ")" ||
         message == " )"
     ) {
-        client.timeout(channel, user.username, 120, "Emre Bey'in sinirini bozan smiley kullanimi. Size 2 dakika timeout veriyorum");
-        client.say(channel, "Emre Bey'in sinirini bozan smiley kullanimi. Size 2 dakika timeout veriyorum.");
+        client.timeout(channel, user.username, 60, "Emre Bey'in sinirini bozan smiley kullanimi. Size 1 dakika timeout veriyorum");
+        client.say(channel, "Emre Bey'in sinirini bozan smiley kullanimi. Size 1 dakika timeout veriyorum.");
     }
 
     if (nakedCmd === "oneri") {
