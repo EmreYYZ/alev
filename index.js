@@ -157,9 +157,9 @@ client.on('chat', (channel, user, message, self) => {
 
         client.say(channel, `Moderator bey, emriniz gerceklestiriliyor. Yayin basligini "${newTitle}" olarak degistiriyorum.`);
 
-        axios.put(`https://api.twitch.tv/kraken/channels/${channelID}`, { "channel": { "status": newTitle } }, {
+        axios.put(`https://api.twitch.tv/helix/channels/${channelID}`, { "channel": { "status": newTitle } }, {
             headers: {
-                "Accept": "application/vnd.twitchtv.v5+json",
+                "Content-Type": "application/json",
                 "Client-ID": clientID,
                 "Authorization": krakenAuth,
             }
