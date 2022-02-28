@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "friendly-errors-webpack-plugin": "npm:@soda/friendly-errors-webpack-plugin@^1.7.1",
     "tmi.js": "^1.5.0",
     "twitch": "^4.0.9"
